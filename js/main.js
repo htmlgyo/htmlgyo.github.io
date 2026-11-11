@@ -61,15 +61,23 @@
   if (P.resume) $("#resumeBtn").href = P.resume;
   else $("#resumeBtn").remove();
 
+  // opens Gmail's compose window in a new tab (instead of the visitor's default mail app)
+  const gmailCompose = (subject = "", body = "") =>
+    `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(P.email)}` +
+    (subject ? `&su=${encodeURIComponent(subject)}` : "") +
+    (body ? `&body=${encodeURIComponent(body)}` : "");
+
   const socialLinks = () =>
     Object.entries(P.socials)
       .filter(([, url]) => url)
       .map(([k, url]) => `<a href="${esc(url)}" target="_blank" rel="noopener" aria-label="${k}">${ICON[k] || ICON.external}</a>`)
-      .join("") + `<a href="mailto:${esc(P.email)}" aria-label="email">${ICON.email}</a>`;
+      .join("") + `<a href="${esc(gmailCompose())}" target="_blank" rel="noopener" aria-label="Email me in Gmail">${ICON.email}</a>`;
   $("#heroSocials").innerHTML = socialLinks();
   $("#contactSocials").innerHTML = socialLinks();
   $("#contactEmail").textContent = P.email;
-  $("#contactEmail").href = `mailto:${P.email}`;
+  $("#contactEmail").href = gmailCompose();
+  $("#contactEmail").target = "_blank";
+  $("#contactEmail").rel = "noopener";
 
   /* code window */
   const topSkills = D.skills.flatMap((g) => g.items).slice(0, 4);
@@ -227,15 +235,15 @@
   $("#contactForm").addEventListener("submit", (e) => {
     e.preventDefault();
     const f = new FormData(e.target);
-    const subject = encodeURIComponent(`Portfolio contact from ${f.get("name")}`);
-    const body = encodeURIComponent(`${f.get("message")}\n\n— ${f.get("name")} (${f.get("email")})`);
+    const subject = `Portfolio contact from ${f.get("name")}`;
+    const body = `${f.get("message")}\n\n— ${f.get("name")} (${f.get("email")})`;
     const a = document.createElement("a");
-    a.href = `mailto:${P.email}?subject=${subject}&body=${body}`;
+    a.href = gmailCompose(subject, body);
     a.target = "_blank";
     a.rel = "noopener";
     a.click();
     const note = $("#formNote");
-    note.innerHTML = `Your email app should open with this message. If it doesn't, email me at <b>${esc(P.email)}</b>.`;
+    note.innerHTML = `Gmail opened in a new tab with your message. Press Send there to deliver it, or email me at <b>${esc(P.email)}</b>.`;
     note.hidden = false;
   });
 
