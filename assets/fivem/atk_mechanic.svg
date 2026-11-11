@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="296" viewBox="0 0 640 296" preserveAspectRatio="xMidYMid slice">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f97316" stop-opacity=".42"/><stop offset=".55" stop-color="#160c04"/><stop offset="1" stop-color="#030303"/></linearGradient>
+  <radialGradient id="spot" cx=".78" cy=".42" r=".5"><stop offset="0" stop-color="#f97316" stop-opacity=".5"/><stop offset="1" stop-color="#f97316" stop-opacity="0"/></radialGradient>
+  <radialGradient id="vig" cx=".5" cy=".5" r=".8"><stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".6"/></radialGradient>
+  <linearGradient id="ttl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#fed7aa"/></linearGradient><linearGradient id="ttl2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fed7aa"/><stop offset="1" stop-color="#f97316"/></linearGradient>
+  <filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+  <filter id="glow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <pattern id="p" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><rect width="1.2" height="14" fill="#fff" opacity=".03"/></pattern>
+</defs>
+<rect width="640" height="296" fill="url(#bg)"/>
+<rect width="640" height="296" fill="url(#spot)"/>
+<rect width="640" height="296" fill="url(#p)"/>
+
+      <circle cx="510" cy="140" r="100" fill="#f97316" opacity=".14" filter="url(#blur)"/>
+      <g transform="translate(510 140)" fill="none" stroke="#f97316" stroke-width="5"><rect x="-9" y="-92" width="18" height="24" rx="3" fill="#f97316" transform="rotate(0)" stroke="none"/><rect x="-9" y="-92" width="18" height="24" rx="3" fill="#f97316" transform="rotate(30)" stroke="none"/><rect x="-9" y="-92" width="18" height="24" rx="3" fill="#f97316" transform="rotate(60)" stroke="none"/><rect x="-9" y="-92" width="18" height="24" rx="3" fill="#f97316" transform="rotate(90)" stroke="none"/><rect x="-9" y="-92" width="18" height="24" rx="3" fill="#f97316" transform="rotate(120)" stroke="none"/><rect x="-9" y="-92" width="18" height="24" rx="3" fill="#f97316" transform="rotate(150)" stroke="none"/><rect x="-9" y="-92" width="18" height="24" rx="3" fill="#f97316" transform="rotate(180)" stroke="none"/><rect x="-9" y="-92" width="18" height="24" rx="3" fill="#f97316" transform="rotate(210)" stroke="none"/><rect x="-9" y="-92" width="18" height="24" rx="3" fill="#f97316" transform="rotate(240)" stroke="none"/><rect x="-9" y="-92" width="18" height="24" rx="3" fill="#f97316" transform="rotate(270)" stroke="none"/><rect x="-9" y="-92" width="18" height="24" rx="3" fill="#f97316" transform="rotate(300)" stroke="none"/><rect x="-9" y="-92" width="18" height="24" rx="3" fill="#f97316" transform="rotate(330)" stroke="none"/><circle r="74" stroke-width="18"/><circle r="30" stroke-width="6"/></g>
+      <g transform="translate(510 140) rotate(40)"><rect x="-8" y="-96" width="16" height="190" rx="5" fill="#cbd5e1" stroke="#fff" stroke-width="1.5"/><path d="M-20 -96a20 20 0 0140 0v18h-12v-12h-16v12h-12z" fill="#cbd5e1" stroke="#fff" stroke-width="1.5"/></g>
+      <path d="M350 262h60l16-26h110l22 26h60" fill="none" stroke="#fff" stroke-width="2" opacity=".45"/><circle cx="440" cy="268" r="10" fill="#0a0a0a" stroke="#fff" opacity=".5"/><circle cx="560" cy="268" r="10" fill="#0a0a0a" stroke="#fff" opacity=".5"/>
+<rect width="640" height="296" fill="url(#vig)"/>
+<text x="30" y="132" font-family="Impact,'Arial Black',sans-serif" font-size="50" font-weight="900" fill="#f97316" opacity=".7" filter="url(#blur)">MECHANIC</text>
+<text x="30" y="132" font-family="Impact,'Arial Black',sans-serif" font-size="50" font-weight="900" fill="#000" opacity=".55" transform="translate(4 5)">MECHANIC</text>
+<text x="30" y="132" font-family="Impact,'Arial Black',sans-serif" font-size="50" font-weight="900" fill="url(#ttl2)" stroke="#000" stroke-opacity=".35" stroke-width="1">MECHANIC</text>
+<text x="64" y="176" font-family="'Segoe Script','Brush Script MT',cursive" font-style="italic" font-weight="700" font-size="34" fill="#000" opacity=".5" transform="translate(2 2)">System</text>
+<text x="64" y="176" font-family="'Segoe Script','Brush Script MT',cursive" font-style="italic" font-weight="700" font-size="34" fill="#fff">System</text>
+<path d="M66 188c40 6 90 4 130-6" fill="none" stroke="#f97316" stroke-width="3" stroke-linecap="round"/>
+<rect x="30" y="238" width="118" height="28" rx="6" fill="#000" opacity=".5" stroke="#f97316" stroke-opacity=".6"/>
+<text x="89" y="257" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="2" fill="#fed7aa">ATK-SYSTEM</text>
+<rect x=".75" y=".75" width="638.5" height="294.5" rx="6" fill="none" stroke="#f97316" stroke-opacity=".5"/>
+</svg>
